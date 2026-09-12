@@ -1,0 +1,22 @@
+public class Admin extends User {
+
+    public Admin(String nama) {
+        super(nama);
+    }
+
+    // Admin dapat menambahkan lagu
+    public void tambahLagu(Lagu[] playlist, Lagu lagu, int posisi) {
+        if (posisi < playlist.length) {
+            playlist[posisi] = lagu;
+            System.out.println("Lagu berhasil ditambahkan.");
+        } else {
+            System.out.println("Playlist sudah penuh.");
+        }
+    }
+
+    // Polymorphism
+    @Override
+    public void tampilkanPeran() {
+        System.out.println("Saya Admin Playlist.");
+    }
+}
