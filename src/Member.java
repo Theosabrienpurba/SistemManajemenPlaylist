@@ -4,7 +4,6 @@ public class Member extends User {
         super(nama);
     }
 
-    // Menampilkan semua lagu
     public void lihatPlaylist(Lagu[] playlist) {
         System.out.println("\n=== DAFTAR PLAYLIST ===");
 
@@ -22,7 +21,6 @@ public class Member extends User {
         }
     }
 
-    // Mencari lagu berdasarkan judul
     public void cariLagu(Lagu[] playlist, String judulCari) {
         boolean ditemukan = false;
 
@@ -40,8 +38,6 @@ public class Member extends User {
             System.out.println("Lagu tidak ditemukan.");
         }
     }
-
-    // Menghitung rata-rata durasi lagu
     public double rataRataDurasi(Lagu[] playlist) {
         double total = 0;
         int jumlah = 0;
@@ -60,7 +56,6 @@ public class Member extends User {
         return total / jumlah;
     }
 
-    // Polymorphism
     @Override
     public void tampilkanPeran() {
         System.out.println("Saya adalah Member Playlist.");

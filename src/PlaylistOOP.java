@@ -1,19 +1,16 @@
 import java.util.Scanner;
 
-public class Main {
+public class PlaylistOOP {
 
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
-        // Array untuk menyimpan kumpulan objek Lagu
         Lagu[] playlist = new Lagu[10];
 
-        // Membuat objek Admin dan Member
         Admin admin = new Admin("Admin");
         Member member = new Member("Member");
 
-        // Menambahkan beberapa lagu awal
         admin.tambahLagu(
                 playlist,
                 new Lagu("Serana", "For Revenge", 4.10),
@@ -71,9 +68,8 @@ public class Main {
         int pilihan;
 
         do {
-            System.out.println("\n==============================");
             System.out.println("   SISTEM PLAYLIST MUSIK");
-            System.out.println("==============================");
+            System.out.println("");
             System.out.println("1. Tambah Lagu");
             System.out.println("2. Lihat Daftar Lagu");
             System.out.println("3. Cari Lagu");
@@ -90,7 +86,6 @@ public class Main {
                 case 1:
                     int posisi = -1;
 
-                    // Mencari posisi kosong dalam array
                     for (int i = 0; i < playlist.length; i++) {
                         if (playlist[i] == null) {
                             posisi = i;
@@ -144,7 +139,6 @@ public class Main {
                 case 5:
                     System.out.println("\n=== PERAN USER ===");
 
-                    // Polymorphism
                     User user1 = admin;
                     User user2 = member;
 

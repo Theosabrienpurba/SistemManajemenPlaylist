@@ -4,7 +4,6 @@ public class Admin extends User {
         super(nama);
     }
 
-    // Admin dapat menambahkan lagu
     public void tambahLagu(Lagu[] playlist, Lagu lagu, int posisi) {
         if (posisi < playlist.length) {
             playlist[posisi] = lagu;
@@ -14,7 +13,6 @@ public class Admin extends User {
         }
     }
 
-    // Polymorphism
     @Override
     public void tampilkanPeran() {
         System.out.println("Saya Admin Playlist.");
